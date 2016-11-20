@@ -1,28 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= full_title(yield(:title)) %></title>
-    <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-
+  <%= render 'layouts/head' %>
   <body>
-    <header>
-        <nav>
-          <div class="nav-wrapper #1b5e20 green darken-4">
-            <%= link_to "sample app", '#', id: "logo" %>
-            <ul id="nav" class="right">
-              <li><%= link_to "Home", '#' %></li>
-              <li><%= link_to "Help", '#' %></li>
-              <li><%= link_to "Log in", '#' %></li>
-            </ul>
-        </nav>
-      </div>
-    </header>
+
+    <%= render 'layouts/header' %>
+
     <div class="container">
       <%= yield %>
+      <%= render 'layouts/footer' %>
     </div>
+
   </body>
+
 </html>

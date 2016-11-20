@@ -1,7 +1,13 @@
 /*** UNIVERSAL ***/
 
 body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
 
+main {
+  flex: 1 0 auto;
 }
 
 section {
@@ -14,10 +20,9 @@ textarea {
 
 .center {
   text-align: center;
-}
-
-.center h1 {
-  margin-bottom: 10px;
+  h1 {
+    margin-bottom: 10px;
+  }
 }
 
 .jumbotron {
@@ -41,16 +46,16 @@ textarea {
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
-}
-
-#logo:hover {
-  color: rgba(255, 255, 255, .5);;
-  text-decoration: none;
+  &:hover {
+    color: rgba(255, 255, 255, .5);;
+    text-decoration: none;
+  }
 }
 
 #nav {
   margin-right: 20px;
 }
+
 
 /*** TYPOGRAPHY ***/
 
@@ -76,4 +81,42 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+}
+
+
+/*** FOOTER ***/
+
+footer.page-footer {
+  background-color: rgba(128, 128, 128, 0.23);
+  margin-top: 45px;
+  padding-top: 5px;
+
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #0d47a1;
+}
+
+.small {
+  float: left;
+  padding-left: 10px;
+  margin-left: 10px;
+  margin-top: 15px;
+}
+
+.info {
+  float: right;
+  list-style: none;
+  padding-right: 10px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
 }
