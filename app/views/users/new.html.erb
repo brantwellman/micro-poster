@@ -1,3 +1,18 @@
 <% provide(:title, 'Sign up') %>
 <h1>Sign up</h1>
-<p>This is a future signup page for new users</p>
+
+<div id="new-user" class="row">
+  <div class="col m6 offset-m3 input-form">
+    <%= form_for(@user) do |f| %>
+      <%= f.text_field :name, placeholder: "Name", class: "form-input" %>
+
+      <%= f.text_field :email, placeholder: "Email", class: "form-input" %>
+
+      <%= f.password_field :password, placeholder: "Password", class: "form-input" %>
+
+      <%= f.password_field :password_confirmation, placeholder: "Confirmation", class: "form-input" %>
+
+      <%= f.submit "Create my account", class: "btn-large #0d47a1 blue darken-4" %>
+    <% end %>
+  </div>
+</div>

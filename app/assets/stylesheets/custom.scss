@@ -1,3 +1,41 @@
+/*** MIXINS, VARIABLES, ETC. ***/
+
+$gray-medium-light: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+
+/*** TYPOGRAPHY ***/
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.0em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+
 /*** UNIVERSAL ***/
 
 body {
@@ -34,6 +72,7 @@ textarea {
   background-color: rgba(128, 128, 128, 0.23);
 }
 
+
 /*** HEADER ***/
 
 #logo {
@@ -57,30 +96,54 @@ textarea {
 }
 
 
-/*** TYPOGRAPHY ***/
+/*** SIDEBAR ***/
 
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
+aside {
+  section.user_info {
+    margin-top: 20px;
+  }
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.6em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
 }
 
-h1 {
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
+
+/*** FORMS ***/
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
 }
 
-h2 {
-  font-size: 2.0em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: #777;
+#new-user .form-input:focus {
+  border-bottom-color: black;
 }
 
-p {
-  font-size: 1.1em;
-  line-height: 1.7em;
+#new-user .form-input {
+  font-size: 1.3em;
+}
+
+#new-user .btn-large {
+  font-size: 1.5em;
 }
 
 
@@ -119,4 +182,16 @@ footer a:hover {
 footer ul li {
   float: left;
   margin-left: 15px;
+}
+
+
+/*** MISCELLANEOUS ***/
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+  background-color: $gray-medium-light;
 }
