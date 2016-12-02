@@ -134,15 +134,16 @@ input, textarea, select, .uneditable-input {
   @include box_sizing;
 }
 
-#new-user .form-input:focus {
+#form .form-input:focus {
   border-bottom-color: black;
+  border-width: 2px;
 }
 
-#new-user .form-input {
+#form .form-input {
   font-size: 1.3em;
 }
 
-#new-user .btn-large {
+#form .btn-large {
   font-size: 1.5em;
 }
 
@@ -176,6 +177,9 @@ input, textarea, select, .uneditable-input {
   }
 }
 
+#sign-up-now {
+  font-size: 1.3em;
+}
 
 /*** FOOTER ***/
 
