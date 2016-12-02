@@ -77,7 +77,6 @@ textarea {
 
 #logo {
   margin-left: 40px;
-  // float: left;
   margin-right: 10px;
   font-size: 1.7em;
   color: #fff;
@@ -95,6 +94,15 @@ textarea {
   margin-right: 20px;
 }
 
+.dropdown-content li a {
+  background-color: #1B5E20;
+  color: #fff;
+  font-size: 1em;
+}
+
+#dropdown {
+  top: auto !important;
+}
 
 /*** SIDEBAR ***/
 
