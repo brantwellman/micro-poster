@@ -125,6 +125,7 @@ GEM
       method_source (~> 0.8.1)
       slop (~> 3.4)
     public_suffix (2.0.4)
+    puma (3.4.0)
     rack (2.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -228,6 +229,7 @@ DEPENDENCIES
   minitest-reporters (= 1.1.9)
   pg
   pry
+  puma (= 3.4.0)
   rails (= 5.0.0.1)
   rails-controller-testing (= 0.1.1)
   sass-rails (~> 5.0)
