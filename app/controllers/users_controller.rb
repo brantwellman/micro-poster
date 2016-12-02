@@ -10,7 +10,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      # do the stuff
+      flash[:success] = "Welcome to Macro-Poster!"
+      redirect_to @user
     else
       render 'new'
     end
