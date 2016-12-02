@@ -27,4 +27,17 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", logout_path
     assert_select "a[href=?]", user_path(@user)
   end
+
+  test "user logout" do
+    get login_path
+    post login_path, params: { session: { email: @user.email,
+                                          password: "password"} }
+    assert is_logged_in?
+    delete logout_path
+    refute is_logged_in?
+    follow_redirect!
+    assert_template 'static_pages/home'
+    assert_select "a[href=?]", login_path
+    assert_select "a[href=?]", user_path(@user), count: 0
+  end
 end
