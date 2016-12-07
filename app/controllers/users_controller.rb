@@ -16,13 +16,22 @@ class UsersController < ApplicationController
       flash[:success] = "Welcome to Macro-Poster, #{@user.name}!"
       redirect_to @user
     else
-      # redirect_to 'new'
       render 'new'
     end
   end
 
   def edit
     @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      flash[:success] = "#{@user.name}, your profile has been updated"
+      redirect_to user_path(@user)
+    else
+      render 'edit'
+    end
   end
 
   private

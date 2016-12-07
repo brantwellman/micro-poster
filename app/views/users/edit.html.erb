@@ -5,21 +5,6 @@
 <div id="form" class="row">
   <div class="col m6 offset-m3 input-form">
       <%= render 'form' %>
-      <!-- <%= form_for(@user) do |f| %> -->
-
-      <!-- <%= render 'shared/error_messages' %>
-
-      <%= f.text_field :name, placeholder: "Name", class: "form-input form-control" %>
-
-      <%= f.text_field :email, placeholder: "Email", class: "form-input form-control" %>
-
-      <%= f.password_field :password, placeholder: "Password", class: "form-input form-control" %>
-
-      <%= f.password_field :password_confirmation, placeholder: "Confirmation", class: "form-input form-control" %>
-
-      <%= f.submit "Save changes", class: "btn-large #0d47a1 blue darken-4" %> -->
-    <!-- <% end %> -->
-
     <div class="gravatar_edit">
       <%= gravatar_for @user %>
       <a href="http://gravatar.com/emails" target="_blank" rel="noopener noreferrer">change</a>
