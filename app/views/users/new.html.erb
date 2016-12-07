@@ -1,22 +1,10 @@
 <% provide(:title, 'Sign up') %>
+<% provide(:button_text, 'Create my account') %>
 <h1>Sign up</h1>
 
 <div id="form" class="row">
   <div class="col m6 offset-m3 input-form">
-    <%= form_for(@user, url: signup_path) do |f| %>
-      <%= render 'shared/error_messages' %>
-
-      <%= f.text_field :name, placeholder: "Name", class: "form-input form-control" %>
-
-      <%= f.text_field :email, placeholder: "Email", class: "form-input form-control" %>
-
-      <%= f.password_field :password, placeholder: "Password", class: "form-input form-control" %>
-
-      <%= f.password_field :password_confirmation, placeholder: "Confirmation", class: "form-input form-control" %>
-
-      <%= f.submit "Create my account", class: "btn-large #0d47a1 blue darken-4" %>
-    <% end %>
-
+      <%= render 'form' %>
     <p id="log-in-here">Already have an account? <%= link_to "Log in here!", login_path %></p>
   </div>
 </div>

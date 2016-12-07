@@ -104,6 +104,7 @@ textarea {
   top: auto !important;
 }
 
+
 /*** SIDEBAR ***/
 
 aside {
@@ -197,6 +198,17 @@ input, textarea, select, .uneditable-input {
 #sign-up-now, #log-in-here {
   font-size: 1.3em;
 }
+
+.gravatar_edit {
+  padding-top: 15px;
+}
+
+.gravatar_edit a {
+  font-size: 1.2em;
+  padding-left: 10px;
+}
+
+
 
 /*** FOOTER ***/
 
