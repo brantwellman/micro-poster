@@ -11,6 +11,9 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'figaro'
 gem 'pg'
 gem 'pry'
+gem 'faker', '1.6.6'
+gem 'will_paginate', '3.1.0'
+gem 'will_paginate-materialize'
 
 group :development, :test do
   gem 'byebug'

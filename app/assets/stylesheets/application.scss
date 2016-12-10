@@ -17,3 +17,7 @@
 @import "materialize/components/color";
 @import "materialize";
 @import "custom";
+
+.pagination a li.active {
+  color: #fff;
+}
