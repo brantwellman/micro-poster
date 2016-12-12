@@ -1,4 +1,4 @@
-User.create!(name:  "Brant",
+p User.create!(name:  "Brant",
              email: "brantwellman@gmail.com",
              password:              "password",
              password_confirmation: "password",
@@ -6,7 +6,7 @@ User.create!(name:  "Brant",
              activated: true,
              activated_at: Time.zone.now)
 
-User.create!(name:  "Example User",
+p User.create!(name:  "Example User",
              email: "example@email.com",
              password:              "password",
              password_confirmation: "password",
@@ -23,5 +23,5 @@ User.create!(name:  "Example User",
                password_confirmation: password,
                activated: true,
                activated_at: Time.zone.now)
-  puts user
+  p user
 end
