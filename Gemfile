@@ -15,6 +15,7 @@ gem 'faker', '1.6.6'
 gem 'will_paginate', '~>3.1.0'
 gem 'will_paginate-materialize', github: 'harrybournis/will_paginate-materialize'
 gem 'responders'
+gem 'active_model_serializers', '~> 0.10.0'
 
 group :development, :test do
   gem 'byebug'

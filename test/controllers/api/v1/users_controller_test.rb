@@ -30,4 +30,16 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_equal @user2.email, parsed2["email"]
     assert_equal 34, parsed_users.count
   end
+
+  test "user api exposes only id, email, name attributes" do
+    get :show, params: { id: @user1.id }, format: :json
+
+    parsed_user = JSON.parse(response.body)
+
+    assert_equal @user1.name, parsed_user["name"]
+    assert_equal @user1.email, parsed_user["email"]
+    assert_equal @user1.id, parsed_user["id"]
+    refute parsed_user["admin"]
+    assert_equal 3, parsed_user.count
+  end
 end
