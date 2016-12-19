@@ -1,7 +1,7 @@
 <% provide(:title, "Reset password")  %>
 <h1>Reset Password</h1>
 
-<div class="row">
+<div id="form" class="row">
   <div class="col m6 offset-m3 input-form">
     <%= form_for(@user, url: password_reset_path(params[:id])) do |f| %>
       <%= render 'shared/error_messages' %>
