@@ -25,9 +25,6 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     parsed2 = parsed_users[1]
 
     assert_response 200
-
-    assert_equal @user1.name, parsed1["name"]
-    assert_equal @user2.email, parsed2["email"]
     assert_equal 34, parsed_users.count
   end
 
