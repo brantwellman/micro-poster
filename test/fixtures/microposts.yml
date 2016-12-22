@@ -1,15 +1,26 @@
 fruit:
   content: "I just ate an orange"
   created_at: <%= 10.minutes.ago %>
+  user: brant
 
 prophecy:
   content: "Watch out. A piano is falling"
   created_at: <%= 3.years.ago %>
+  user: brant
 
 funny:
   content: "Greyhounds sleep upside down!"
   created_at: <%= 2.hours.ago %>
+  user: brant
 
 most_recent:
   content: "This is the most recent post"
   created_at: <%= Time.zone.now %>
+  user: brant
+
+<% 30.times do |n| %>
+micropost_<%= n %>:
+  content: <%= Faker::Lorem.sentence(5) %>
+  created_at: <%= 42.days.ago %>
+  user: brant
+<% end %>
