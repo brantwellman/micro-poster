@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :users
   resources :account_activates, only: [:edit]
   resources :password_resets,   only: [:edit, :new, :create, :update]
+  resources :microposts,        only: [:create, :destroy]
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
