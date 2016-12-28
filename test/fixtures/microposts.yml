@@ -24,3 +24,23 @@ micropost_<%= n %>:
   created_at: <%= 42.days.ago %>
   user: brant
 <% end %>
+
+ants:
+  content: "Here are some of your favorite insects!"
+  created_at: <%= 2.years.ago %>
+  user: dan
+
+zone:
+  content: "You are entering the danger zone with Kenny Loggins!"
+  created_at: <%= 3.days.ago %>
+  user: dan
+
+tone:
+  content: "Don't look at me in that tone of voice."
+  created_at: <%= 10.minutes.ago %>
+  user: steve
+
+van:
+  content: "Here! In my van!"
+  created_at: <%= 4.hours.ago %>
+  user: steve
