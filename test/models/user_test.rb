@@ -91,6 +91,7 @@ class UserTest < ActiveSupport::TestCase
     refute brant.following?(dan)
     brant.follow(dan)
     assert brant.following?(dan)
+    assert dan.followers.include?(brant)
     brant.unfollow(dan)
     refute brant.following?(dan)
   end
