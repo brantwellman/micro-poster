@@ -8,9 +8,6 @@ class UsersProfileTest < ActionDispatch::IntegrationTest
     @user = users(:brant)
     @user_2 = users(:dan)
     @user_3 = users(:steve)
-    @user.following << @user_2
-    @user.followers << @user_2
-    @user.followers << @user_3
   end
 
   test "profile display" do
