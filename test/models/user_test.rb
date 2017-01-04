@@ -95,4 +95,22 @@ class UserTest < ActiveSupport::TestCase
     brant.unfollow(doubleA)
     refute brant.following?(doubleA)
   end
+
+  test "feed should have the right posts" do
+    brant = users(:brant)
+    dan = users(:dan)
+    doubleA = users(:doubleA)
+    # Posts from a followed user
+    dan.microposts.each do |post_following|
+      assert brant.feed.include?(post_following)
+    end
+    # Posts from self
+    brant.microposts.each do |post_self|
+      assert brant.feed.include?(post_self)
+    end
+    # Posts from unfollowed user
+    doubleA.microposts.each do |post_unfollowed|
+      refute brant.feed.include?(post_unfollowed)
+    end
+  end
 end
